@@ -10,3 +10,6 @@ fetch('https://www.younghoon.ms.kr/api/school_food_api.jsp').then(res=>{return r
     document.getElementById("b").innerHTML = "오늘 급식없다 멍충아";
   }
 });
+document.querySelector('#bg').addEventListener('click', () => {
+  document.querySelector('#bg').src = 'night.png';
+})
