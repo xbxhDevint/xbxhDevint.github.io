@@ -1,11 +1,33 @@
-#bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 body {
-    margin: 0;
+  margin: 0;
+}
+div {
+  position: absolute;
+  bottom: 5%;
+  left: 25px;
+  color: white;
+}
+#time {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 100px;
+  color: white;
+}
+#date {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: white;
 }
