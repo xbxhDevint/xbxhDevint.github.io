@@ -15,5 +15,5 @@ function time() {
   document.getElementById('date').innerHTML = `${date.getMonth()+1}/${date.getDate()} ${date.toString().split(" ")[0]}`;
   document.getElementById('time').innerHTML = `${hour >12 ? (hour -12).toString().padStart(2,"0") :hour }:${date.getMinutes().toString().padStart(2, "0")}`;
 }
-time()
+time();
 setInterval(time(), 1000);
