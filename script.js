@@ -1,5 +1,5 @@
-let date = new Date();
-let hour = date.getHours().toString().padStart(2, "0");
+date = new Date();
+hour = date.getHours().toString().padStart(2, "0");
 fetch('https://www.younghoon.ms.kr/api/school_food_api.jsp').then(res => { return res.json() }).then(json => {
   const meal = json["result"]
   meal.forEach(function(meal) {
