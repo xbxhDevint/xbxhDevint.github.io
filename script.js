@@ -18,4 +18,4 @@ function time() {
   document.getElementById('time').innerHTML = `${hour >12 ? (hour -12).toString().padStart(2,"0") :hour }:${date.getMinutes().toString().padStart(2, "0")}`;
 }
 time();
-setInterval(time(), 1000);
+setInterval(time, 1000);
