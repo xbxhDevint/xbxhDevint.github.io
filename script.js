@@ -11,5 +11,9 @@ fetch('https://www.younghoon.ms.kr/api/school_food_api.jsp').then(res => { retur
     document.getElementById("meal").innerHTML = "오늘 급식은 없습니다";
   }
 });
-document.getElementById('date').innerHTML = `${date.getMonth()+1}/${date.getDate()} ${date.toString().split(" ")[0]}`;
-document.getElementById('time').innerHTML = `${hour >12 ? (hour -12).toString().padStart(2,"0") :hour }:${date.getMinutes().toString().padStart(2, "0")}`;
+function time() {
+  document.getElementById('date').innerHTML = `${date.getMonth()+1}/${date.getDate()} ${date.toString().split(" ")[0]}`;
+  document.getElementById('time').innerHTML = `${hour >12 ? (hour -12).toString().padStart(2,"0") :hour }:${date.getMinutes().toString().padStart(2, "0")}`;
+}
+time()
+setInterval(time(), 60000);
