@@ -1,5 +1,5 @@
-const date = new Date()
-const hour = date.getHours().toString().padStart(2, "0")
+let date = new Date();
+let hour = date.getHours().toString().padStart(2, "0");
 fetch('https://www.younghoon.ms.kr/api/school_food_api.jsp').then(res => { return res.json() }).then(json => {
   const meal = json["result"]
   meal.forEach(function(meal) {
@@ -12,6 +12,8 @@ fetch('https://www.younghoon.ms.kr/api/school_food_api.jsp').then(res => { retur
   }
 });
 function time() {
+  date = new Date();
+  hour = date.getHours().toString().padStart(2, "0");
   document.getElementById('date').innerHTML = `${date.getMonth()+1}/${date.getDate()} ${date.toString().split(" ")[0]}`;
   document.getElementById('time').innerHTML = `${hour >12 ? (hour -12).toString().padStart(2,"0") :hour }:${date.getMinutes().toString().padStart(2, "0")}`;
 }
