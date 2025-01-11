@@ -7,7 +7,7 @@ fetch('https://www.younghoon.ms.kr/api/school_food_api.jsp').then(res => { retur
       document.getElementById("meal").innerHTML = meal["DDISH_NM"];
     }
   });
-  if (document.getElementById("meal").innerHTML == "") {
+  if (document.getElementById("meal").innerHTML == "로딩 중...") {
     document.getElementById("meal").innerHTML = "오늘 급식은 없습니다";
   }
 });
