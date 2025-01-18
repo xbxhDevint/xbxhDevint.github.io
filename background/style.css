@@ -9,25 +9,35 @@
 body {
   margin: 0;
 }
-div {
+#menu {
   position: absolute;
   bottom: 5%;
   left: 25px;
   color: white;
 }
-#time {
-  position: absolute;
-  top: -35px;
+
+#topInterface {
+  position: fixed;
+  top: 0%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 100px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
-#date {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+
+#date{
   font-size: 20px;
-  color: white;
+  margin: 0;
 }
+
+#time{
+  font-size: 100px;
+  margin: -20px;
+}
+#topInterface{
+  margin-top: 50px;
+}
+
