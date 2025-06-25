@@ -41,11 +41,11 @@
                     return 0
                 } else {
                     document.getElementById("fins").innerText = (goal-kp/km*ks-fp/fm*fs-mp/100*ms)/fp*100;
-                    console.log((goal-ks/km*kp-fs/fm*fp-ms/100*mp)/fp*100);
+                    console.log((goal-ks/km*kp-fs/fm*fp-ms/100*mp)/finp*100);
                 }
             }
         </script>
-        목표:<input type="number" id="goal" style="width: auto;height: auto;" value="95">
+        목표:<input type="number" id="goal" style="width: auto;height: auto;" value="95"  onchange="update()">
         <table>
             <tbody>
                 <tr>
