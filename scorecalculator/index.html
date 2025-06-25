@@ -33,9 +33,10 @@
                 let ms = Number(document.getElementById("ms").value);
                 if (isNaN(goal+km+fm+kp+fp+mp+finp+ks+fs+ms)) {
                     return 0
+                } else {
+                    document.getElementById("fins").value = (goal-kp/km*ks-fp/fm*fs-mp/100*ms)/fp*100;
+                    console.log((goal-kp/km*ks-fp/fm*fs-mp/100*ms)/fp*100);
                 }
-                document.getElementById("finscore").value = (goal-kp/km*ks-fp/fm*fs-mp/100*ms)/fp*100;
-                console.log(document.getElementById("finscore").value = (goal-kp/km*ks-fp/fm*fs-mp/100*ms)/fp*100);
             }
         </script>
         목표:<input type="number" id="goal" style="width: auto;height: auto;" value="95">
@@ -67,7 +68,7 @@
                     <td><input type="number" id="ks" onchange="update()"></td>
                     <td><input type="number" id="fs" onchange="update()"></td>
                     <td><input type="number" id="ms" onchange="update()"></td>
-                    <td><strong id="finscore"></strong></td>
+                    <td><strong id="fins"></strong></td>
                 </tr>
             </tbody>
         </table>
