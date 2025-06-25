@@ -1,0 +1,75 @@
+<html lang="en">
+    <head>
+        <style>
+            table {
+                border-collapse : collapse; 
+            }
+            th,td {
+                width: 100px;
+                height: 50px;
+                text-align: center;
+                border: 1px solid #000;
+            }
+            input{
+                border: 0px;
+                width: 100px;
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            console.log("meow");
+            function update() {
+                let goal = Number(document.getElementById("goal").value);
+                let km = Number(document.getElementById("km").value);
+                let fm = Number(document.getElementById("fm").value);
+                let kp = Number(document.getElementById("kp").value);
+                let fp = Number(document.getElementById("fp").value);
+                let mp = Number(document.getElementById("mp").value);
+                let finp = Number(document.getElementById("finp").value);
+                let ks = Number(document.getElementById("ks").value);
+                let fs = Number(document.getElementById("fs").value);
+                let ms = Number(document.getElementById("ms").value);
+                if (isNaN(goal+km+fm+kp+fp+mp+finp+ks+fs+ms)) {
+                    return 0
+                }
+                document.getElementById("finscore").value = (goal-kp/km*ks+fp/fm*fs+mp/100*ms)/fp*100;
+                console.log(document.getElementById("finscore").value = (goal-kp/km*ks+fp/fm*fs+mp/100*ms)/fp*100);
+            }
+        </script>
+        목표:<input type="number" id="goal" style="width: auto;height: auto;" value="95">
+        <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>kt</td>
+                    <td>ft</td>
+                    <td>중간</td>
+                    <td>기말</td>
+                </tr>
+                <tr>
+                    <td>만점</td>
+                    <td><input type="number" id="km" onchange="update()"></td>
+                    <td><input type="number" id="fm" onchange="update()"></td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>반영비율</td>
+                    <td><input type="number" id="kp" onchange="update()"></td>
+                    <td><input type="number" id="fp" onchange="update()"></td>
+                    <td><input type="number" id="mp" onchange="update()"></td>
+                    <td><input type="number" id="finp" onchange="update()"></td>
+                </tr>
+                <tr>
+                    <td>점수</td>
+                    <td><input type="number" id="ks" onchange="update()"></td>
+                    <td><input type="number" id="fs" onchange="update()"></td>
+                    <td><input type="number" id="ms" onchange="update()"></td>
+                    <td><strong id="finscore"></strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
