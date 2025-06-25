@@ -34,8 +34,8 @@
                 if (isNaN(goal+km+fm+kp+fp+mp+finp+ks+fs+ms)) {
                     return 0
                 }
-                document.getElementById("finscore").value = (goal-kp/km*ks+fp/fm*fs+mp/100*ms)/fp*100;
-                console.log(document.getElementById("finscore").value = (goal-kp/km*ks+fp/fm*fs+mp/100*ms)/fp*100);
+                document.getElementById("finscore").value = (goal-kp/km*ks-fp/fm*fs-mp/100*ms)/fp*100;
+                console.log(document.getElementById("finscore").value = (goal-kp/km*ks-fp/fm*fs-mp/100*ms)/fp*100);
             }
         </script>
         목표:<input type="number" id="goal" style="width: auto;height: auto;" value="95">
