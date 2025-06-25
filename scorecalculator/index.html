@@ -34,7 +34,7 @@
                 if (isNaN(goal+km+fm+kp+fp+mp+finp+ks+fs+ms)) {
                     return 0
                 } else {
-                    document.getElementById("fins").value = (goal-kp/km*ks-fp/fm*fs-mp/100*ms)/fp*100;
+                    document.getElementById("fins").innerText = (goal-kp/km*ks-fp/fm*fs-mp/100*ms)/fp*100;
                     console.log((goal-kp/km*ks-fp/fm*fs-mp/100*ms)/fp*100);
                 }
             }
