@@ -36,12 +36,11 @@
                 } if (fm==0) {
                     fm = 100;
                 }
-                console.log(goal,km,fm,kp,fp,mp,finp,ks,fs,ms)
                 document.getElementById("fins").innerText = (goal-kp/km*ks-fp/fm*fs-mp/100*ms)/finp*100;
-                console.log((goal-ks/km*kp-fs/fm*fp-ms/100*mp)/finp*100);
+                document.getElementById("max").innerText = (ks/km*kp+fs/fm*fp+ms/100*mp+finp/100)*100
             }
         </script>
-        목표:<input type="number" id="goal" style="width: auto;height: auto;" value="95"  onchange="update()">
+        <h4>목표:<input type="number" id="goal" style="width: auto;height: auto;" value="95"  onchange="update()"></h4>
         <table>
             <tbody>
                 <tr>
@@ -74,5 +73,6 @@
                 </tr>
             </tbody>
         </table>
+        <h4>만점시:<span id="max"></span></h4>
     </body>
 </html>
