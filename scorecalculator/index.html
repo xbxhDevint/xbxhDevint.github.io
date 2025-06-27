@@ -37,7 +37,7 @@
                     fm = 100;
                 }
                 document.getElementById("fins").innerText = (goal-kp/km*ks-fp/fm*fs-mp/100*ms)/finp*100;
-                document.getElementById("max").innerText = (ks/km*kp+fs/fm*fp+ms/100*mp+finp/100)*100
+                document.getElementById("max").innerText = (ks/km*kp+fs/fm*fp+ms/100*mp+finp)
             }
         </script>
         <h4>목표:<input type="number" id="goal" style="width: auto;height: auto;" value="95"  onchange="update()"></h4>
