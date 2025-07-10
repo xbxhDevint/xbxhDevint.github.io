@@ -1,0 +1,76 @@
+<html lang="en">
+    <head>
+        <style>
+            table {
+                border-collapse : collapse; 
+            }
+            th,td {
+                width: 100px;
+                height: 50px;
+                text-align: center;
+                border: 1px solid #000;
+            }
+            input{
+                border: 0px;
+                width: 100px;
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            console.log("meow");
+            function update() {
+                let km = Number(document.getElementById("km").value);
+                let fm = Number(document.getElementById("fm").value);
+                let kp = Number(document.getElementById("kp").value);
+                let fp = Number(document.getElementById("fp").value);
+                let mp = Number(document.getElementById("mp").value);
+                let finp = Number(document.getElementById("finp").value);
+                let ks = Number(document.getElementById("ks").value);
+                let fs = Number(document.getElementById("fs").value);
+                let ms = Number(document.getElementById("ms").value);
+                let fins = Number(document.getElementById("fins").value);
+                if (km==0) {
+                    km = 100;
+                } if (fm==0) {
+                    fm = 100;
+                }
+                document.getElementById("max").innerText = (ks/km*kp+fs/fm*fp+ms/100*mp+fins/100*finp)
+            }
+        </script>
+        <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>kt</td>
+                    <td>ft</td>
+                    <td>중간</td>
+                    <td>기말</td>
+                </tr>
+                <tr>
+                    <td>만점</td>
+                    <td><input type="number" id="km" onchange="update()"></td>
+                    <td><input type="number" id="fm" onchange="update()"></td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>반영비율</td>
+                    <td><input type="number" id="kp" onchange="update()"></td>
+                    <td><input type="number" id="fp" onchange="update()"></td>
+                    <td><input type="number" id="mp" onchange="update()"></td>
+                    <td><input type="number" id="finp" onchange="update()"></td>
+                </tr>
+                <tr>
+                    <td>점수</td>
+                    <td><input type="number" id="ks" onchange="update()"></td>
+                    <td><input type="number" id="fs" onchange="update()"></td>
+                    <td><input type="number" id="ms" onchange="update()"></td>
+                    <td><input type="number" id="fins" onchange="update()"></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>최<strong>종</strong>점수<span id="max"></span></h4>
+    </body>
+</html>
